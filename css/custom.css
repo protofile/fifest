@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 :root {
     --color-primary: #225E48;
@@ -141,6 +143,7 @@ header {
 
 }
 
+
 /* section about filantropi week */
 .about-filantropi-week {
     background: linear-gradient(90deg, #0c4b3a 0%, #4c7c6c 100%);
@@ -154,8 +157,7 @@ header {
 }
 
 .about-filantropi-week .gradient-box {
-    background: linear-gradient(90deg, #0c4b3a 0%, #a8bf79 100%);
-    height: 162px;
+    background: linear-gradient(90deg, #0c4b3a 0%, #a8bf79 100%); 
 }
 
 @media (max-width: 580px) {
@@ -165,6 +167,37 @@ header {
     }
 
 }
+
+
+/* Countdown */
+#countdown{
+
+    font-family: "Bebas Neue", sans-serif;
+  }
+  #countdown > div { 
+    }
+  
+    #countdown div > div { 
+      font-weight: bold;
+    font-size: 80px;
+    line-height: 0.8;
+    }
+  
+    #countdown small { 
+      color: #bbc6ab !important;
+    display: block;
+    margin-top: 4px; 
+    font-size: 24px; 
+    }
+    @media (max-width: 600px) {  
+        #countdown div > div { 
+            font-size: 30px; 
+          }
+          #countdown.gap-4 {
+            gap: 10px !important;
+          }
+
+    }
 
 /* section main program */
 .main-program {
@@ -422,11 +455,12 @@ header {
     padding-bottom: 100px;
     position: relative;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-    margin-bottom: 100px;
+    margin-bottom: 100px; 
 }
 
 .sp-card {
     padding-top: 75px;
+    cursor: pointer;
 }
 
 .sp-card .sp-name {
@@ -505,7 +539,78 @@ header {
         align-items: flex-start;
         gap: 1rem;
     }
-}
+} 
+.profile-card {
+    color: var(--color-primary) !important;
+    position: absolute;
+  width: 100%;
+  background: #f9f8f5;
+  border-radius: 6px;
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+  overflow: hidden;
+  padding: 70px 25px;
+  left: 0px;
+  text-align: center;
+  top: calc( 0px - 20px);
+  height: auto;
+  border: 1px solid #d7d7d7;
+  display: none;
+  }
+  .speaker-section .sp-card.popup-active .profile-card{
+    display: block;
+  }
+  .speaker-section .sp-card.popup-active{
+    z-index: 2;
+  }
+
+  .profile-card .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+  }
+
+  .profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  .profile-card .profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .profile-card .profile-title {
+    font-size: 14px; 
+    margin-bottom: 15px;
+  }
+
+  .profile-card .profile-desc {  
+    margin-bottom: 20px;
+  }
+
+  .profile-card .social-icons a {
+    color: var(--color-primary) !important;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  .profile-card .social-icons a:hover {
+    color: #007bff;
+  }
+ .speaker-section .sp-card{
+position: relative;
+ }
 
 
 /* Carousel */
