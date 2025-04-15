@@ -22,7 +22,7 @@
     /* Countdown */
     function updateCountdown() {
         const now = new Date();
-        const targetDate = new Date('2025-08-30T00:00:00');
+        const targetDate = new Date('2025-08-04T00:00:00');
         const diff = targetDate - now;
     
         if (diff <= 0) {
