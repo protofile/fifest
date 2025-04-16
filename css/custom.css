@@ -146,9 +146,10 @@ header {
 
 /* section about filantropi week */
 .about-filantropi-week {
-    background: linear-gradient(90deg, #0c4b3a 0%, #4c7c6c 100%);
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    background: url('../img/bg1.png'), linear-gradient(90deg, #0c4b3a 0%, #4c7c6c 100%);
+background-size: 150px, 100%; 
+  background-repeat: no-repeat, repeat; 
+  background-position: right 10px;
 }
 
 .about-filantropi-week .catalyzing {
@@ -234,10 +235,16 @@ header {
 }
 
 /* Schedule */
-.schedule-agenda {
-    background-color: #CEE5B8;
+.schedule-agenda { 
+      background: url('../img/bg2.png'), #CEE5B8;
+      background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 35% auto;
 }
 
+@media (max-width: 767px) { 
+  .schedule-agenda { background-size: 100px; } 
+}
 .schedule-agenda li.nav-item {
     width: calc(33.33% - 10px);
     display: flex;
@@ -616,6 +623,10 @@ position: relative;
 /* Carousel */
 
 .content-carousel .card-carousel {
+          background-image: url('../img/bg3.png');
+          background-size: 60% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
     padding: 50px;
     width: 485px;
     height: 504px;
@@ -706,7 +717,19 @@ position: relative;
 
 
 /* Sponsor */
-
+.sponsor-section {
+      background-image: url('../img/bg4.png');
+      background-repeat: no-repeat;
+ background-position: left 0px bottom 0px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 300px;
+}
+@media (max-width: 767px) { 
+.sponsor-section { 
+  padding-bottom: 100px;
+}
+}
 .sponsor-section .section-title {
     font-weight: 700;
     color: #004225;
